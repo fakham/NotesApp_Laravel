@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('pages', 'PageController@show');
+
+Route::post('pagesstore', 'PageController@store');
+
+Route::get('pages/{page}/delete', 'PageController@delete');
