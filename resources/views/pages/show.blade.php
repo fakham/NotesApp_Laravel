@@ -5,7 +5,7 @@
 <span><b>Pages List</b></span>
 
 @foreach ($pages as $page)
-<a href="#">
+<a href="pages/{{ $page->id }}">
 	<div class="row list-group-item page-title-list">
 	    <div class="col-xs-8">
 	        {{ $page->title }}

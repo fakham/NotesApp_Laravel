@@ -16,6 +16,11 @@ class PageController extends Controller
         return view('pages.show', compact('pages'));
     }
 
+    public function onepage(Page $page) {
+
+        return view('pages.onepage', compact('page'));
+    }
+
     public function store(Request $request) {
 
         $page = new Page;
