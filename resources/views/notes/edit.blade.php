@@ -20,7 +20,7 @@
           <input type="text" name="text" value="{{ $note->text }}" class="form-control" placeholder="Add Note . . .">
           <span class="input-group-btn">
             <button class="btn btn-default" type="submit">Edit</button>
-            <a href="#" class="btn btn-danger">Cancel</a>
+            <a href="../" class="btn btn-danger">Cancel</a>
           </span>
         </div>
     </form>

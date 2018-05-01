@@ -16,7 +16,7 @@
      {{ $note->text }}
     </div>
     <div class="col-xs-4">
-        <button type="button" class="btn btn-danger pull-right">Delete</button> 
+        <a href="../notes/{{ $note->id }}/delete" type="button" class="btn btn-danger pull-right">Delete</a> 
         <a href="../notes/{{ $note->id }}/edit" class="btn btn-default pull-right">Edit</a> 
     </div>
 </div>

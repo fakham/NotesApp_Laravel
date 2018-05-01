@@ -34,4 +34,12 @@ class NoteController extends Controller
         return redirect('pages/' . $note->page_id );
 
     }
+
+    public function delete(Note $note) {
+
+        $note->delete();
+
+        return back();
+
+    }
 }

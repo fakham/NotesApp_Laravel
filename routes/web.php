@@ -28,3 +28,5 @@ Route::post('pages/{page}/notesstore', 'NoteController@store');
 Route::get('notes/{note}/edit', 'NoteController@edit');
 
 Route::post('notes/{note}/update', 'NoteController@update');
+
+Route::get('notes/{note}/delete', 'NoteController@delete');
