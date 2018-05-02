@@ -28,12 +28,22 @@
     <form method="POST" action="{{ $page->id }}/notesstore">
         {{ csrf_field() }}
         <div class="input-group">
-          <input type="text" name="text" class="form-control" placeholder="Add Note . . .">
+          <input type="text" name="text" value="{{ old('text') }}" class="form-control" placeholder="Add Note . . .">
           <span class="input-group-btn">
             <button class="btn btn-default" type="submit">Add</button>
           </span>
         </div>
     </form>
 </div>
+
+@if (count($errors))
+    <ul>
+    @foreach($errors->all() as $error)
+
+        <li>{{ $error }}</li>
+
+    @endforeach
+    </ul>
+@endif
 
 @stop

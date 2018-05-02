@@ -11,6 +11,12 @@ class NoteController extends Controller
 {
     public function store(Request $request, Page $page) {
         
+        $this->validate(
+            $request,
+            ['text' => 'required|min:5'],
+            ['text.required' => 'Le text est obligatoire!']
+        );
+
         $note = new Note;
 
         $note->text = $request->text;
