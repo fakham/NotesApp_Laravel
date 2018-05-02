@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use DB;
 use App\Page;
+use App\Note;
 
 class PageController extends Controller
 {
@@ -35,9 +36,26 @@ class PageController extends Controller
 
     public function delete(Page $page) {
 
+        if (count($page->notes)) {
+
+            return view('pages.deleteall', compact('page'));
+
+        } else {
+
+            $page->delete();
+
+            return back();
+        }
+
+    }
+
+    public function deleteall(Page $page) {
+
         $page->delete();
 
-        return back();
+        $page->notes()->delete();
+
+        return redirect('../../pages');
 
     }
 }

@@ -21,6 +21,8 @@ Route::post('pagesstore', 'PageController@store');
 
 Route::get('pages/{page}/delete', 'PageController@delete');
 
+Route::get('pages/{page}/deleteall', 'PageController@deleteall');
+
 Route::get('pages/{page}', 'PageController@onepage');
 
 Route::post('pages/{page}/notesstore', 'NoteController@store');
